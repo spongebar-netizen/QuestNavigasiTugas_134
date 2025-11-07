@@ -58,3 +58,34 @@ fun WelcomeScreen(
                 contentScale = ContentScale.Crop
             )
         }
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Text(
+                text = stringResource(R.string.welcome_name),
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Medium,
+                color = CustomColor1
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = stringResource(R.string.welcome_nim),
+                fontSize = 18.sp,
+                color = CustomColor2
+            )
+        }
+
+
+        Button(
+            onClick = {
+                navController.navigate(Navigasi.Formulirku.name)
+            },
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = DarkPurple),
+            shape = RoundedCornerShape(50)
+        ) {
+            Text(
+                text = stringResource(R.string.welcome_submit),
+                modifier = Modifier.padding(8.dp)
+            )
+        }
+    }
+}
