@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">Praktikum6p</string>
+
+    <string name="welcome_title">Selamat Datang</string>
+    <string name="welcome_name">Nashrul Fikri</string>
+    <string name="welcome_nim">20230140105</string>
+    <string name="welcome_submit">Submit</string>
+
+    <string name="form_title">Formulir Pendaftaran</string>
+    <string name="nama_lengkap">NAMA LENGKAP</string>
+    <string name="placeholder_nama">Isian nama lengkap</string>
+    <string name="jenis_kelamin">JENIS KELAMIN</string>
+    <string name="option_pria">Laki-laki</string>
+    <string name="option_wanita">Perempuan</string>
+    <string name="status_perkawinan">STATUS PERKAWINAN</string>
+    <string name="option_janda">Janda</string>
+    <string name="option_lajang">Lajang</string>
+    <string name="option_duda">Duda</string>
+    <string name="alamat">ALAMAT</string>
+    <string name="placeholder_alamat">Alamat</string>
+
+    <string name="list_title">List Daftar Peserta</string>
+    <string name="list_beranda">Beranda</string>
+    <string name="list_formulir">Formulir Pendaftaran</string>
+
+    <string name="dialog_title">Hasil Pendaftaran</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_nama">Nama:</string>
+    <string name="dialog_kelamin">Jenis Kelamin:</string>
+    <string name="dialog_status">Status:</string>
+    <string name="dialog_alamat">Alamat:</string>
 </resources>
