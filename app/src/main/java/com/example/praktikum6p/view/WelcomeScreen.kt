@@ -58,6 +58,8 @@ fun WelcomeScreen(
                 contentScale = ContentScale.Crop
             )
         }
+
+
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = stringResource(R.string.welcome_name),
