@@ -69,3 +69,27 @@ fun FormulirScreen(
             )
         }
     }
+
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp),
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp)
+        ) {
+            FormLabel(text = stringResource(R.string.nama_lengkap))
+            OutlinedTextField(
+                value = uiState.nama,
+                onValueChange = { viewModel.setNama(it) },
+                placeholder = { Text(stringResource(R.string.placeholder_nama)) },
+                modifier = Modifier.fillMaxWidth(),
+                // --- FIX TEKS TEBAL (HITAM) ---
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedTextColor = Color.Black, // Teks saat diketik
+                    unfocusedTextColor = Color.Black // Teks saat tidak difokus
+                )
+            )
