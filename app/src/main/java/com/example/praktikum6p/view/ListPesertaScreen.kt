@@ -33,3 +33,18 @@ fun ListPesertaScreen(
             .background(LightBackground)
             .systemBarsPadding()
     ) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(HeaderPurple)
+                .padding(16.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = stringResource(R.string.list_title),
+                color = Color.White,
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold
+            )
+        }
+    }
