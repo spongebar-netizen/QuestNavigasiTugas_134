@@ -26,3 +26,35 @@ val DarkPurple = Color(0xFFCA00EE)
 val LightPurple = Color(0xF8EE93FC)
 val CustomColor1 = Color(0xFFD32F2F)
 val CustomColor2 = Color(0xFF1976D2)
+
+@Composable
+fun WelcomeScreen(
+    navController: NavController,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .systemBarsPadding()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceAround
+    ) {
+        Text(
+            text = stringResource(R.string.welcome_title),
+            fontSize = 32.sp,
+            fontWeight = FontWeight.Bold,
+            color = DarkPurple
+        )
+
+        Box(
+            modifier = Modifier.size(200.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.__nayuta_chainsaw_man_drawn_by_gyunyu_gokugoku__c29bec06fdea86067ec5d38828bbc52c),
+                contentDescription = "Logo",
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop
+            )
+        }
