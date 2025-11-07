@@ -54,3 +54,18 @@ fun FormulirScreen(
             .systemBarsPadding()
             .verticalScroll(rememberScrollState())
     ) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(HeaderPurple)
+                .padding(16.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = stringResource(R.string.form_title),
+                color = Color.White,
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold
+            )
+        }
+    }
