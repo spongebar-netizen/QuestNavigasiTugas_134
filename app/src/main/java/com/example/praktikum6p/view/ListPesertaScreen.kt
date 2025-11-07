@@ -48,3 +48,29 @@ fun ListPesertaScreen(
             )
         }
     }
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        DataCard(label = stringResource(R.string.nama_lengkap), data = uiState.nama)
+        Spacer(modifier = Modifier.height(16.dp))
+        DataCard(label = stringResource(R.string.jenis_kelamin), data = uiState.jenisKelamin)
+        Spacer(modifier = Modifier.height(16.dp))
+        DataCard(label = stringResource(R.string.status_perkawinan), data = uiState.status)
+        Spacer(modifier = Modifier.height(16.dp))
+        DataCard(label = stringResource(R.string.alamat), data = uiState.alamat)
+
+        Spacer(modifier = Modifier.weight(1f))
+
+        Button(
+            onClick = {
+                navController.navigate(Navigasi.Welcome.name) // Balik ke Welcome
+            },
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = HeaderPurple),
+            shape = RoundedCornerShape(16.dp)
+        ) {
+            Text(text = stringResource(R.string.list_beranda))
+        }
