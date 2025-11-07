@@ -1,11 +1,19 @@
 package com.example.praktikum6p.view
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -19,11 +27,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.praktikum6.R
 import com.example.praktikum6p.Navigasi
-import com.example.praktikum6p.R
 
-val DarkPurple = Color(0xFFCA00EE)
-val LightPurple = Color(0xF8EE93FC)
+
+val DarkPurple = Color(0xFFE600EE)
 val CustomColor1 = Color(0xFFD32F2F)
 val CustomColor2 = Color(0xFF1976D2)
 
@@ -47,18 +55,20 @@ fun WelcomeScreen(
             color = DarkPurple
         )
 
+
         Box(
             modifier = Modifier.size(200.dp),
             contentAlignment = Alignment.Center
         ) {
+
+            Text("Tempat Logo di sini", textAlign = TextAlign.Center)
             Image(
-                painter = painterResource(id = R.drawable.__nayuta_chainsaw_man_drawn_by_gyunyu_gokugoku__c29bec06fdea86067ec5d38828bbc52c),
+                painter = painterResource(id = R.drawable.cyrene),
                 contentDescription = "Logo",
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop
             )
         }
-
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
@@ -74,7 +84,6 @@ fun WelcomeScreen(
                 color = CustomColor2
             )
         }
-
 
         Button(
             onClick = {
